@@ -57,9 +57,9 @@
 }
 
 - (NSDate *)dateFromJSONDate:(NSString *)json {
-    NSInteger milliseconds = [[[json stringByReplacingOccurrencesOfString:@"/Date("
+    double milliseconds = [[[json stringByReplacingOccurrencesOfString:@"/Date("
                                                                withString:@""] stringByReplacingOccurrencesOfString:@")/"
-                               withString:@""] integerValue];
+                               withString:@""] doubleValue];
     NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:milliseconds / 1000];
 
     return date;
