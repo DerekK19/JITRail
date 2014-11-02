@@ -58,12 +58,13 @@
 
 - (NSDate *)dateFromJSONDate:(NSString *)json {
     double milliseconds = [[[json stringByReplacingOccurrencesOfString:@"/Date("
-                                                               withString:@""] stringByReplacingOccurrencesOfString:@")/"
-                               withString:@""] doubleValue];
+                                                            withString:@""] stringByReplacingOccurrencesOfString:@")/"
+                            withString:@""] doubleValue];
     NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:milliseconds / 1000];
-
+    
     return date;
 }
+
 #pragma mark - TableViewDtaSource methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
