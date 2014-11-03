@@ -4,6 +4,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 pod 'AFNetworking'
+pod 'EGOTableViewPullRefresh'
+pod 'SVProgressHUD',            :head
 
 target 'JITRail' do
 
