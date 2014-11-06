@@ -12,9 +12,9 @@
 @interface ViewController : UIViewController <
 UITableViewDataSource,
 EGORefreshTableHeaderDelegate,
-UITableViewDelegate>
-
-
+UITableViewDelegate,
+UIPickerViewDataSource,
+UIPickerViewDelegate>
 
 @end
 
